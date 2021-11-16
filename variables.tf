@@ -5,3 +5,11 @@ variable "project_name" {
 variable "environment" {
   type = string
 }
+
+variable "acl" {
+  type = string
+}
+
+variable "bucket_name" {
+  type = string
+}
