@@ -2,7 +2,7 @@ name: Terraform plan
 on:
   pull_request:
     branches:
-      - feature/actions-terra
+      - main
 
 jobs:
   terrraform-plan:
