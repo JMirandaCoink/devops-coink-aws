@@ -18,6 +18,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Configure AWS credential
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{env.AWS_ACCESS_KEY_ID}}
+          aws-secret-access-key: ${{env.AWS_SECRET_ACCESS_KEY}}
+          aws-region: ${{env.AWS_REGION}}
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
       - name: Terraform init
@@ -25,7 +31,7 @@ jobs:
         run: terraform init
       - name: Terraform Plan
         id: Plan
-        if: github.event_name == 'push'
+        if: github.event_name == 'pull_request'
         run: terraform plan -no-color
         continue-on-error: true
       - name: Terraform Plan status

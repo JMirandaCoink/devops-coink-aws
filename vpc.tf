@@ -11,18 +11,18 @@ module "vpc" {
 
   enable_nat_gateway = true
   private_subnet_tags = {
-      "kubernetes.io/role/internal-elb" = "1",
-      "kubernetes.io/cluster/${var.project_name}-${var.environment}" = "shared"
+    "kubernetes.io/role/internal-elb"                              = "1",
+    "kubernetes.io/cluster/${var.project_name}-${var.environment}" = "shared"
   }
 
   public_subnet_tags = {
-      "kubernetes.io/cluster/${var.project_name}-${var.environment}" = "shared"
-      "kubernetes.io/role/elb" = "1"
+    "kubernetes.io/cluster/${var.project_name}-${var.environment}" = "shared"
+    "kubernetes.io/role/elb"                                       = "1"
   }
 
   tags = {
-    Terraform = "true"
-    Environment = var.environment
+    Terraform    = "true"
+    Environment  = var.environment
     project_name = var.project_name
   }
 }
