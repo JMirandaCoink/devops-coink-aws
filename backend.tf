@@ -1,7 +1,7 @@
-/*terraform {
+terraform {
   backend "s3" {
-    bucket = "backend-terraform"
+    bucket = "coink-bkt-tfstate"
     key = "dev"
     region = "us-east-2"
   }
-}*/
+}
