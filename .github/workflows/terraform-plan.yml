@@ -2,7 +2,7 @@ name: Terraform plan
 on:
   push:
     branches:
-      - feature/config-vpc
+      - feature/actions-terra
 
 jobs:
   terrraform-plan:
