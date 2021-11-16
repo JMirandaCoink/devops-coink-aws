@@ -1,6 +1,7 @@
-terraform {
+/*terraform {
   backend "s3" {
-    bucket = "terraform-backend"
+    bucket = "backend-terraform"
     key = "dev"
+    region = "us-east-2"
   }
-}
+}*/
