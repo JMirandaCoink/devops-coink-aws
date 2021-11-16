@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "terra-backend" {
-  bucket = "${var.project_name}-bucket"
+  bucket = "var.bucket_name"
   acl = var.acl
 
   tags = {
