@@ -37,5 +37,5 @@ resource "aws_iam_role_policy_attachment" "attachment3" {
 
 resource "aws_iam_role_policy_attachment" "attachment4" {
   role       = aws_iam_role.nodes.name
-  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNOdePolicy"
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
 }
